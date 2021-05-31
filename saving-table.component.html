@@ -1,0 +1,34 @@
+<div class="dtc-saving-table-container">
+  <div class="row no-gutters">
+    <div class="col-12">
+      <div class="row no-gutters">
+        <div class="col-7">
+          <div class="row no-gutters">
+            <div class="col-5">
+              <p>${{ targetGoal }}</p>
+              <p>Total Amount</p>
+            </div>
+            <div class="col-2">
+              <div class="row no-gutters">
+                <div class="col-4 dtc-saving-table-percentage">
+                  <div class="dtc-saving-table-percentage-text">
+                    {{ getPercentage }}%
+                  </div>
+                </div>
+                <div class="col-8 dtc-saving-goal-met">goal met!</div>
+              </div>
+            </div>
+            <div class="col-5 dtc-saving-table-amount">
+              <p>${{ goalBalanceToDate }}</p>
+              <p>Saving Amount</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row no-gutters" *ngFor="let data of storeTableData">
+        <div class="col-6">{{ data.label }}</div>
+        <div class="col-6">{{ data.value }}</div>
+      </div>
+    </div>
+  </div>
+</div>
